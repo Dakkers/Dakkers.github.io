@@ -4,7 +4,11 @@ title: Projects
 permalink: /projects/
 ---
 
-Not everything I'm currently working on is listed here.
+Most of my time these days is spent working on [Bidvine](https://www.bidvine.com) stuff, followed by game development, followed by music.
+
+# Old Projects
+
+These are projects I no longer work on.
 
 ## numbers.js
 **The most popular numerical library for JavaScript / NodeJS.**
