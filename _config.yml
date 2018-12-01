@@ -1,17 +1,17 @@
 # Site settings
 title: Dakota St. Laurent
 description: King of the Rain
-email: hello@saintdako.com
+email: d.h.stlaurent@gmail.com
 baseurl: /
-url: "http://saintdako.github.io" # the base hostname & protocol for your site
+url: "http://dakkers.github.io" # the base hostname & protocol for your site
 #favicon
 # favicon: /favicon.png
 
 #feed
 # feedburner_username: maangalabs
 #twitter
-twitter_username: StDako
-github_username:  SaintDako
+twitter_username: Dakkers
+github_username:  Dakkers
 
 #linkedin
 linkedin_username: dakotastlaurent
@@ -37,8 +37,8 @@ disqus_show_comment_count: true
 authors:
   saintdako:
     display_name: Dakota St. Laurent
-    email: hello@saintdako.com
+    email: d.h.stlaurent@gmail.com
     fb: dakota.stlaurent
     linkedin: dakotastlaurent
-    twitter: StDako
-    github: SaintDako
+    twitter: Dakkers
+    github: Dakkers
