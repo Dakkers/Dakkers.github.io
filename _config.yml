@@ -1,44 +1,55 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
 # Site settings
-title: Dakota St. Laurent
-description: King of the Rain
-email: d.h.stlaurent@gmail.com
-baseurl: /
-url: "http://dakkers.github.io" # the base hostname & protocol for your site
-#favicon
-# favicon: /favicon.png
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
 
-#feed
-# feedburner_username: maangalabs
-#twitter
-twitter_username: Dakkers
-github_username:  Dakkers
+title: Your awesome title
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
 
-#linkedin
-linkedin_username: dakotastlaurent
-
-#google analytics
-google_analytics_id : UA-65122404-1
-#gplus
-# gplus_username: 101893920934936418705
-
-#fb_username
-fb_username: dakota.stlaurent
-
-#permalink /blog/2014/11/11/this-is-a-sample-post
-permalink: /blog/:year/:month/:day/:title
 # Build settings
-markdown: kramdown
+theme: jekyll-theme-cayman
+plugins:
+  - jekyll-feed
 
-#Disqus configuration
-disqus_short_name: SaintDako
-disqus_show_comment_count: true
-
-#Can be used for multiple author blogs ! Add name to post For more visit the sample
-authors:
-  saintdako:
-    display_name: Dakota St. Laurent
-    email: d.h.stlaurent@gmail.com
-    fb: dakota.stlaurent
-    linkedin: dakotastlaurent
-    twitter: Dakkers
-    github: Dakkers
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
