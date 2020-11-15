@@ -8,10 +8,6 @@
 layout: home
 ---
 
-Cayman Blog Theme is a clean, responsive blogging theme for Jekyll. It is inspired by the Cayman Theme for Github Pages, which can be greatly used for single projects but not as blogging platform.
+Hi! I'm Dakota. I'm currently a senior software developer at [Bidvine](https://www.bidvine.com/) where I've led the migration from Ember to React. I've worked on many other features while there, most prominently Bidvine Plus, an in-house subscription service.
 
-This theme has instead all you need to start today blogging with Jekyll, and no effort: pages, posts, few social buttons. Try loading this on mobile too.
-
-Have a look at the Github page for more information.
-
-You find this descriptive text in the `index.md` file, so you can change it, or remove it completely, according to your needs.
+In my spare time, I [make music](https://dak-music.bandcamp.com/) and I also do some game development. You can check out my first game on Steam called [Chessers](https://store.steampowered.com/app/868730) - it's a bastardized hybrid of chess and checkers.
