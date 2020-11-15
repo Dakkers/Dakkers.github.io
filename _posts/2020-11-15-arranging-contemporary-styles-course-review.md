@@ -1,12 +1,10 @@
 ---
 layout: post
-title:  "Course Review: Berklee Online - Arranging: Contemporary Styles"
+title:  "Course Review of “Berklee Online - Arranging: Contemporary Styles”"
 date:   2020-11-15 12:00:00
 categories: music course review online
 comments: true
 ---
-
-# Course Review: Berklee Online “Arranging: Contemporary Styles”
 
 Hi! I’m going to give a brief review of my experience with Berklee Online’s “Arranging: Contemporary Styles” course. I took this course online during the Summer 2020 semester (July - September), and it was taught by Dan Moretti. The course was one of those that come on sale every 3 months, discounted by $300 USD, which ends up coming to the “low" price of $1,700 CAD (non-credit).
 
