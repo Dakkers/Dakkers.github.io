@@ -6,9 +6,9 @@ categories: music course review online
 comments: true
 ---
 
-Hi! I’m going to give a brief review of my experience with Berklee Online’s “Arranging: Contemporary Styles” course. I took this course online during the Summer 2020 semester (July - September), and it was taught by Dan Moretti. The course was one of those that come on sale every 3 months, discounted by $300 USD, which ends up coming to the “low" price of $1,700 CAD (non-credit).
+Hi! I’m going to give a brief review of my experience with [Berklee Online’s “Arranging: Contemporary Styles”](https://online.berklee.edu/courses/arranging-contemporary-styles) course. I took this course online during the Summer 2020 semester (July - September), and it was taught by Dan Moretti. The course was one of those that come on sale every 3 months, discounted by $300 USD, which ends up coming to the “low" price of $1,700 CAD (non-credit).
 
-My previous experience with Berklee Online was taking 1 course in the Winter 2020 semester (January - March), which was “Arranging for Songwriters: Instrumentation and Production in Songwriting”. (Also discounted, and I had an additional $300 USD discount from completing a Coursera course offered by Berklee).
+My previous experience with Berklee Online was taking 1 course in the Winter 2020 semester (January - March), which was [“Arranging for Songwriters: Instrumentation and Production in Songwriting”](https://online.berklee.edu/courses/arranging-for-songwriters-instrumentation-and-production-in-songwriting). (Also discounted, and I had an additional $300 USD discount from completing a Coursera course offered by Berklee).
 
 I’m not a particularly articulate writer, and it’s been over a month since I’ve wrapped up the course, so apologies if it’s too brief for you to pass judgement on the course. I’m writing this review because I don’t see enough reviews from people about courses that aren’t free, so it’s hard for someone to dictate whether or not they’d like to enrol in the course, especially considering the price tag.
 
