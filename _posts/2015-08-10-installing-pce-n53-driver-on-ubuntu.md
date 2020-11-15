@@ -2,7 +2,7 @@
 layout: post
 title:  "Installing the PCE-N53 Driver on Ubuntu 12.04"
 date:   2015-08-10 23:00:00
-categories: ubuntu wireless
+categories: dev
 comments: true
 ---
 
