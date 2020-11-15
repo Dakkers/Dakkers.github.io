@@ -17,7 +17,8 @@ theme: # leave it empty
 
 # social
 author: dakkers
-image: /thumbnail-jumbo.png
+disqus:
+  shortname: d.h.stlaurent@gmail.com
 twitter:
   username:
 
