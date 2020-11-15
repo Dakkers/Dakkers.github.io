@@ -1,9 +1,9 @@
-title: Cayman Blog Theme
-description: Cayman Blog Theme is a clean, responsive blogging theme for Jekyll and Gitlab/GitHub Pages.
-show_downloads: true
+title: CDakota St. Laurent
+description: Software developer and musical dood
+show_downloads: false
 
-baseurl: "/cayman-blog" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
-url: "https://lorepirri.github.io" # change this to the base hostname & protocol for your site
+baseurl: ""
+url: "https://dakkers.github.io"
 
 
 google_analytics:
@@ -16,10 +16,10 @@ cayman-blog:
 theme: # leave it empty
 
 # social
-author: lorepirri
+author: dakkers
 image: /thumbnail-jumbo.png
 twitter:
-  username: lorepirri
+  username:
 
 plugins:
   - jekyll-target-blank
@@ -27,4 +27,4 @@ plugins:
 target-blank:
     rel: nofollow
 
-header_page_refs: ['now', 'about', 'contact']
+# header_page_refs: ['now', 'about', 'contact']
