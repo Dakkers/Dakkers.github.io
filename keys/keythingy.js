@@ -14,6 +14,7 @@ const ALL_KEYS = [
 ];
 
 const remainingKeys = ALL_KEYS.slice();
+const keysPlayed = [];
 let _hasStarted = false;
 
 // -- Helpers :)
@@ -37,17 +38,16 @@ function updateListContent () {
   remainingListElem.innerHTML = '';
   playedListElem.innerHTML = '';
 
-  for (const key of ALL_KEYS) {
+  for (const key of keysPlayed) {
     const newLiElem = document.createElement('li');
     newLiElem.innerText = key;
+    playedListElem.appendChild(newLiElem);
+  }
 
-    const listToUse = (
-      remainingKeys.includes(key)
-        ? remainingListElem
-        : playedListElem
-    );
-
-    listToUse.appendChild(newLiElem);
+  for (const key of remainingKeys) {
+    const newLiElem = document.createElement('li');
+    newLiElem.innerText = key;
+    remainingListElem.appendChild(newLiElem);
   }
 }
 
@@ -122,6 +122,8 @@ function _resetKeys () {
   remainingKeys.push(...ALL_KEYS.slice());
   _shuffleArray(remainingKeys);
 
+  keysPlayed.length = 0;
+
   updateListContent();
 }
 
@@ -132,7 +134,8 @@ function next () {
   } else if (remainingKeys.length === 0) {
     updateLetterText('---');
   } else {
-    remainingKeys.shift();
+    const key = remainingKeys.shift();
+    keysPlayed.push(key);
     _handleCurrentKey();
   }
   updateListContent();
