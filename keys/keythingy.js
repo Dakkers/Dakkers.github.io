@@ -76,9 +76,6 @@ function getMIDIMessage(message) {
         noteOn(note);
       }
       break;
-    case 176: // MIDI Control #0
-      restart();
-      break;
     default:
       break
   }
@@ -87,6 +84,8 @@ function getMIDIMessage(message) {
 function noteOn (note) {
   if (note === 21) {
     next();
+  } else if (note === 108) {
+    restart();
   }
 }
 
