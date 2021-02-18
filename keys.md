@@ -41,6 +41,7 @@ const ALL_KEYS = [
 ];
 
 const remainingKeys = ALL_KEYS.slice();
+let _hasStarted = false;
 
 // -- Helpers :)
 
@@ -74,6 +75,31 @@ function updateListContent () {
     );
 
     listToUse.appendChild(newLiElem);
+  }
+}
+
+function _handleCurrentKey () {
+  updateLetterText(remainingKeys[0]);
+  speak(remainingKeys[0]);
+}
+
+// -- TTS
+
+function speak (key) {
+  let contentToSpeak = key;
+  if (key.includes('#')) {
+    const [, keyFlat] = key.split('/');
+    contentToSpeak = keyFlat.replace('b', ' flat');
+  }
+  if (contentToSpeak.startsWith('A')) {
+    contentToSpeak = contentToSpeak.replace('A', 'Eh');
+  }
+
+  if (
+    !!window.speechSynthesis &&
+    !!window.speechSynthesis.speak
+  ) {
+    window.speechSynthesis.speak(new SpeechSynthesisUtterance(contentToSpeak));
   }
 }
 
@@ -118,26 +144,35 @@ function noteOn (note) {
 
 // -- Buttons / Inputs
 
+function _resetKeys () {
+  remainingKeys.length = 0;
+  remainingKeys.push(...ALL_KEYS.slice());
+  _shuffleArray(remainingKeys);
+
+  updateListContent();
+}
+
 function next () {
-  remainingKeys.shift();
-  if (remainingKeys.length === 0) {
+  if (!_hasStarted) {
+    _handleCurrentKey();
+    _hasStarted = true;
+  } else if (remainingKeys.length === 0) {
     updateLetterText('---');
   } else {
-    updateLetterText(remainingKeys[0]);
+    remainingKeys.shift();
+    _handleCurrentKey();
   }
   updateListContent();
 }
 
 function restart () {
-  remainingKeys.length = 0;
-  remainingKeys.push(...ALL_KEYS.slice());
-  _shuffleArray(remainingKeys);
-
-  updateLetterText(remainingKeys[0]);
+  _hasStarted = false;
+  _resetKeys();
+  updateLetterText('---');
   updateListContent();
 }
 
-function onKeyDown (event) {
+function onKeystrokeDown (event) {
   if ([13, 32].includes(event.keyCode)) {
     next();
   } else if ([27, 82].includes(event.keyCode)) {
@@ -147,9 +182,9 @@ function onKeyDown (event) {
 
 (function init () {
   navigator.requestMIDIAccess().then(onMIDISuccess, onMIDIFailure);
-  restart();
+  _resetKeys();
+  updateLetterText('---');
 
-
-  document.addEventListener('keydown', onKeyDown);
+  document.addEventListener('keydown', onKeystrokeDown);
 })();
 </script>
