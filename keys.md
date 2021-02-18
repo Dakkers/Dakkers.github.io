@@ -9,7 +9,7 @@ order: 3
 
 <div>
   <p>
-    Welcome to this dinky tool! It goes through all 12 keys at random; I use it to practice scales, chord types, etc. without developing muscle memory of moving around the circle of 5ths. You can hit Space/Enter to go to the next key, Esc to restart.
+    Welcome to this dinky tool! It goes through all 12 keys at random; I use it to practice scales, chord types, etc. without developing muscle memory of moving around the circle of 5ths. You can hit Space/Enter to go to the next key, Esc/R to restart. Alternatively if your MIDI keyboard is plugged in when accessing this page, the lowest A on the keyboard will go to the next key and the "cycle" MIDI Control will restart.
   </p>
 
   <button onclick="next()">Next</button>
@@ -77,6 +77,46 @@ function updateListContent () {
   }
 }
 
+// -- MIDI
+
+function onMIDISuccess(midiAccess) {
+  const inputs = midiAccess.inputs;
+  const outputs = midiAccess.outputs;
+
+  for (const input of midiAccess.inputs.values()) {
+    input.onmidimessage = getMIDIMessage;
+  }
+}
+
+function onMIDIFailure() {
+  window.alert('Could not access your MIDI devices.');
+}
+
+function getMIDIMessage(message) {
+  const command = message.data[0];
+  const note = message.data[1];
+  const velocity = (message.data.length > 2) ? message.data[2] : 0; // a velocity value might not be included with a noteOff command
+
+  switch (command) {
+    case 144: // noteOn
+      if (velocity > 0) {
+        noteOn(note);
+      }
+      break;
+    case 176: // MIDI Control #0
+      restart();
+      break;
+    default:
+      break
+  }
+}
+
+function noteOn (note) {
+  if (note === 21) {
+    next();
+  }
+}
+
 // -- Buttons / Inputs
 
 function next () {
@@ -101,13 +141,15 @@ function restart () {
 function onKeyDown (event) {
   if ([13, 32].includes(event.keyCode)) {
     next();
-  } else if (event.keyCode === 27) {
+  } else if ([27, 82].includes(event.keyCode)) {
     restart();
   }
 }
 
 (function init () {
+  navigator.requestMIDIAccess().then(onMIDISuccess, onMIDIFailure);
   restart();
+
 
   document.addEventListener('keydown', onKeyDown);
 })();

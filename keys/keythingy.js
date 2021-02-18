@@ -7,7 +7,7 @@ const ALL_KEYS = [
   'F',
   'F#/Gb',
   'G',
-  'Gb/A#',
+  'G#/Ab',
   'A',
   'A#/Bb',
   'B'
@@ -50,6 +50,46 @@ function updateListContent () {
   }
 }
 
+// -- MIDI
+
+function onMIDISuccess(midiAccess) {
+  const inputs = midiAccess.inputs;
+  const outputs = midiAccess.outputs;
+
+  for (const input of midiAccess.inputs.values()) {
+    input.onmidimessage = getMIDIMessage;
+  }
+}
+
+function onMIDIFailure() {
+  window.alert('Could not access your MIDI devices.');
+}
+
+function getMIDIMessage(message) {
+  const command = message.data[0];
+  const note = message.data[1];
+  const velocity = (message.data.length > 2) ? message.data[2] : 0; // a velocity value might not be included with a noteOff command
+
+  switch (command) {
+    case 144: // noteOn
+      if (velocity > 0) {
+        noteOn(note);
+      }
+      break;
+    case 176: // MIDI Control #0
+      restart();
+      break;
+    default:
+      break
+  }
+}
+
+function noteOn (note) {
+  if (note === 21) {
+    next();
+  }
+}
+
 // -- Buttons / Inputs
 
 function next () {
@@ -66,18 +106,23 @@ function restart () {
   remainingKeys.length = 0;
   remainingKeys.push(...ALL_KEYS.slice());
   _shuffleArray(remainingKeys);
+
+  updateLetterText(remainingKeys[0]);
+  updateListContent();
 }
 
 function onKeyDown (event) {
-  if ([13, 32].include(event.keyCode)) {
+  if ([13, 32].includes(event.keyCode)) {
     next();
+  } else if ([27, 82].includes(event.keyCode)) {
+    restart();
   }
 }
 
 (function init () {
+  navigator.requestMIDIAccess().then(onMIDISuccess, onMIDIFailure);
   restart();
-  updateLetterText(remainingKeys[0]);
-  updateListContent();
+
 
   document.addEventListener('keydown', onKeyDown);
 })();
