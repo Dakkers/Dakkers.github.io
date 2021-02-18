@@ -9,11 +9,19 @@ order: 3
 
 <div>
   <p>
-    Welcome to this dinky tool! It goes through all 12 keys at random; I use it to practice scales, chord types, etc. without developing muscle memory of moving around the circle of 5ths. You can hit Space/Enter to go to the next key, Esc/R to restart. Alternatively if your MIDI keyboard is plugged in when accessing this page, the lowest A on the keyboard will go to the next key and the highest C will restart.
+    Welcome to this dinky tool! It goes through all 12 keys at random; I use it to practice scales, chord types, etc. without developing muscle memory of moving around the circle of 5ths. You can hit Space/Enter to go to the next key, Esc/R to restart.
+  </p>
+
+  <p>
+    Alternatively if your MIDI keyboard is plugged in when accessing this page, the lowest A on the keyboard will go to the next key and the highest C will restart.
+  </p>
+
+  <p>
+    Lastly, if you use Chrome, the computer will speak to you so you don't have to look at the computer screen to see what key it is. :)
   </p>
 
   <button onclick="next()">Next</button>
-  <button onclick="restart()">Reset</button>
+  <button onclick="restart()">Restart</button>
 
   <h1 id="letter"></h1>
 
@@ -23,6 +31,7 @@ order: 3
   <p>Played:</p>
   <ul id='list-2'></ul>
 </div>
+
 
 <script>
 const ALL_KEYS = [
