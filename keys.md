@@ -148,6 +148,7 @@ function noteOn (note) {
     next();
   } else if (note === 108) {
     restart();
+    next();
   }
 }
 
@@ -168,11 +169,17 @@ function next () {
     _handleCurrentKey();
     _hasStarted = true;
   } else if (remainingKeys.length === 0) {
-    updateLetterText('---');
+    restart();
+    next();
   } else {
     const key = remainingKeys.shift();
     keysPlayed.push(key);
-    _handleCurrentKey();
+
+    if (remainingKeys.length === 0) {
+      updateLetterText('---');
+    } else {
+      _handleCurrentKey();
+    }
   }
   updateListContent();
 }
