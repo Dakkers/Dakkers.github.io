@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Course Review of “Berklee Online - Songwriting: Harmony"
+title:  "Course Review of “Berklee Online - Songwriting: Harmony“"
 date:   2021-06-02 22:15:00
 categories: music
 comments: true
