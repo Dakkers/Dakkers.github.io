@@ -8,6 +8,6 @@
 layout: home
 ---
 
-Hi! I'm Dakota. I'm currently a senior software developer at [Bidvine](https://www.bidvine.com/) where I've led the migration from Ember to React. I've worked on many other features while there, most prominently Bidvine Plus, an in-house subscription service.
+Hi! I'm Dakota. I'm an incoming senior software engineer at [ApplyBoard](https://www.applyboard.com/). I was previously a senior software developer at [Bidvine](https://www.bidvine.com/) where I led the migration from Ember to React and developed many, many other features.
 
 In my spare time, I [make music](https://dak-music.bandcamp.com/) and I also do some game development. You can check out my first game on Steam called [Chessers](https://store.steampowered.com/app/868730) - it's a bastardized hybrid of chess and checkers.
