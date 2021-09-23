@@ -2,7 +2,7 @@
 layout: post
 title:  "Course Review of “Berklee Online - Arranging: Contemporary Styles”"
 date:   2020-11-15 12:00:00
-categories: music
+categories: school
 comments: true
 ---
 
